@@ -1,6 +1,6 @@
 # Setup
-title: 유니티 게임개발 블로그
-description: 게임 개발, 더 나은 구조, 더 나은 코드
+title: Unity 게임 개발 일지
+description: Unity 게임 개발자의 기술적 성장과 문제 해결 과정을 공유합니다. 더 나은 코드, 더 나은 구조, 더 나은 게임을 위한 여정
 url: https://vlaud.github.io/
 avatar: /avatar.jpeg
 paginate: 5
@@ -38,7 +38,7 @@ social:
     - https://twitter.com/vszhub
     - https://github.com/vszhub
 google_site_verification: xxxxx
-lang: en
+lang: ko
 
 sass:
   sass_dir: _sass
