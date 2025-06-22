@@ -3,7 +3,7 @@ layout: post
 title: "Unity 3D 공포 게임 프로젝트 - choswork"
 date: 2025-05-23
 categories: [Unity, GameDev, Portfolio]
-tags: [Unity, C#, FSM, GameDevelopment, AI, 3D]
+tags: [Unity, csharp, FSM, GameDev, AI, 3D]
 ---
 
 # choswork: 투약 시간(가제)
@@ -124,5 +124,5 @@ tags: [Unity, C#, FSM, GameDevelopment, AI, 3D]
 
 ---
 
-*작성일: 2025.05.23*
+*작성일: 2025.05.23*<br/>
 *작성자: Cho Donghyun (Unity 클라이언트 개발자 지망생)* 

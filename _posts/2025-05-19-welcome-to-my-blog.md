@@ -89,5 +89,5 @@ tags: [Unity, GameDev, Introduction]
 
 ---
 
-*작성일: 2025.05.19*
+*작성일: 2025.05.19*<br/>
 *작성자: Cho Donghyun (Unity 클라이언트 개발자 지망생)* 
