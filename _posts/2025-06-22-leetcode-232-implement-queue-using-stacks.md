@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[LeetCode] 232 Implement Queue using Stacks"
+title: "[LeetCode 232]  Implement Queue using Stacks"
 date: 2025-06-22
 categories: [Algorithm, LeetCode]
 tags: [Algorithm, LeetCode, Stack, Queue, 자료구조]
@@ -71,7 +71,7 @@ private:
 - `move`: 두 스택 사이의 이동을 관리
 - 큐의 앞(front)은 항상 outStack의 top에 위치
 
-### 시간복잡도
+## 시간복잡도
 - 각 연산의 평균 시간복잡도: O(1) (Amortized)
 - `move`: O(n)
 
@@ -82,4 +82,4 @@ private:
 ---
 
 *작성일: 2025.06.22*<br/>
-*작성자: Cho Donghyun (Unity 클라이언트 개발자 지망생)*
+*작성자: Cho Donghyun*
