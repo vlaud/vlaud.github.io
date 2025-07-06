@@ -12,11 +12,12 @@
   <ul class="post-tags">
     {%- for tag in page.tags -%}
       <li>
-        {% assign slugified_tag = tag | slugify %}
+        <!-- +는 plus, #은 sharp로 변환 -->
+        {% assign sanitized_tag = tag | replace: '+', 'plus' | replace: '#', 'sharp' | slugify %}
         {%- if tags_archive_page -%}
-          <a class="post-tag" href="{{ tags_archive_page | relative_url }}#{{ slugified_tag }}">{{ slugified_tag }}</a>
+          <a class="post-tag" href="{{ tags_archive_page | relative_url }}#{{ sanitized_tag }}">{{ tag }}</a>
         {%- else -%}
-          <span class="post-tag">{{ slugified_tag }}</span>
+          <span class="post-tag">{{ tag }}</span>
         {%- endif -%}
       </li>
     {%- endfor -%}

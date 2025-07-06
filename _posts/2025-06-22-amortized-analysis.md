@@ -3,7 +3,7 @@ layout: post
 title: "분할 상환 분석 (Amortized Analysis) - 개념과 예시"
 date: 2025-06-22
 categories: [Algorithm]
-tags: [Algorithm, 자료구조, 분석]
+tags: [Algorithm, 자료구조, 분석, C++]
 ---
 
 ## 개념
