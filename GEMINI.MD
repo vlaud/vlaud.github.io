@@ -3,6 +3,7 @@ leetcode 리뷰 작성 틀은 다음과 같다.
 
 파일 제목 : 년-월-일-leetcode-문제번호-문제타이틀.md
 (예: 2025-06-28-leetcode-973-k-closest-points-to-origin.md)
+반말 + 문어체 형식으로 작성
 ---
 layout: post
 title: "[LeetCode 문제번호] (문제 제목)"
