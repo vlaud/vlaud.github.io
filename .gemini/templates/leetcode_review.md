@@ -1,6 +1,9 @@
 # leetcode 리뷰 작성 틀
 leetcode 리뷰 작성 틀은 다음과 같다.
 
+리뷰 및 포스트를 작성할 때는 항상 반말 + 문어체 형식으로 작성
+(예 : 개념의 주요 특징이나 속성을 설명한다.)
+
 파일 제목 : 년-월-일-leetcode-문제번호-문제타이틀.md
 (예: 2025-06-28-leetcode-973-k-closest-points-to-origin.md)
 ---
@@ -58,5 +61,5 @@ tags: [Algorithm, LeetCode, 태그1, 태그2, 태그3, 등등]
 
 ---
 
-*작성일: 2025.06.28*<br/>
+*작성일: 년.월.일*<br/>
 *작성자: Cho Donghyun*
