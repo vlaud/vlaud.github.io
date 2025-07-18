@@ -23,6 +23,16 @@ layout: default
         {%- if forloop.last == false %}, {% endif -%}
       {% endfor %}
     {%- endif -%}
+    {%- if page.categories.size > 0 -%}
+      <span> • </span>
+      <span itemprop="keywords">
+      {%- for category_slug in page.categories -%}
+        {%- assign category_name = site.data.taxonomy_labels[category_slug] | default: category_slug -%}
+        <a href="{{ site.baseurl }}/categories/#{{ category_slug }}">{{ category_name }}</a>
+        {%- unless forloop.last -%},&nbsp;{%- endunless -%}
+      {%- endfor -%}
+      </span>
+    {%- endif -%}
   </div>
 
   {{ content }}

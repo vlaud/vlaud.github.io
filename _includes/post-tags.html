@@ -1,5 +1,7 @@
-{%- if site.data.archive -%}
+<!-- 전체 사이트 구조에서 “태그 모음 페이지”의 URL을 찾는 역할 -->
+{%- if site.data.archive -%} 
   {%- for item in site.data.archive -%}
+    <!-- tags 항목을 찾아, 그 항목의 url을 tags_archive_page 변수에 저장한 뒤 반복문을 중단 -->
     {%- if item.type == "tags" -%}
       {% assign tags_archive_page = item.url %}
       {% break %}
@@ -12,10 +14,12 @@
   <ul class="post-tags">
     {%- for tag in page.tags -%}
       <li>
-        <!-- +는 plus, #은 sharp로 변환 -->
-        {% assign sanitized_tag = tag | replace: '+', 'plus' | replace: '#', 'sharp' | slugify %}
+        {%- assign tag_slug = tag -%}
+        {%- assign tag_name = site.data.taxonomy_labels[tag_slug] | default: tag_slug -%}
+        <!-- tags_archive_page가 존재하면 -->
         {%- if tags_archive_page -%}
-          <a class="post-tag" href="{{ tags_archive_page | relative_url }}#{{ sanitized_tag }}">{{ tag }}</a>
+        <!-- 태그 이름이 링크로 출력 -->
+          <a class="post-tag" href="{{ tags_archive_page | relative_url }}#{{ tag_slug }}">{{ tag_name }}</a>
         {%- else -%}
           <span class="post-tag">{{ tag }}</span>
         {%- endif -%}

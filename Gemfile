@@ -8,6 +8,7 @@ gem 'fiddle'
 gem 'bigdecimal'
 gem 'csv'
 gem 'logger'
+gem 'faraday-retry'
 
 group :jekyll_plugins do
   gem 'jekyll-gist'

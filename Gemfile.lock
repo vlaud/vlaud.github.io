@@ -30,6 +30,8 @@ GEM
       logger
     faraday-net_http (3.4.0)
       net-http (>= 0.5.0)
+    faraday-retry (2.3.2)
+      faraday (~> 2.0)
     ffi (1.17.2-x64-mingw-ucrt)
     fiddle (1.1.8)
     forwardable-extended (2.6.0)
@@ -111,6 +113,7 @@ DEPENDENCIES
   bigdecimal
   bundler (~> 2.1)
   csv
+  faraday-retry
   fiddle
   jekyll-compose
   jekyll-gist
