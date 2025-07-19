@@ -2,7 +2,7 @@
 layout: post
 title: "emplace_back vs push_back - 개념과 예시"
 date: 2025-07-06
-categories: [cplusplus, modern-cplusplus]
+categories: [STL]
 tags: [cplusplus, cplusplus11, emplace_back, push_back, vector, performance]
 ---
 
