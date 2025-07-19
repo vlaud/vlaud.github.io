@@ -75,3 +75,27 @@ footer {
     width: 75%;
   }
 }
+
+// 화면의 최소 너비가 $lg-width 이상일 때 아래의 .content 스타일을 적용
+// 이 스타일은 페이지의 콘텐츠 영역을 중앙(width: 50%)에 배치하고, 좌우 여백을 25%로 설정합니다.
+@media (min-width: $lg-width) {
+  .content {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+/* Swup animations */
+.transition-fade {
+  transition: 0.4s; // 0.4초 동안 애니메이션 효과 적용
+  opacity: 1; // 초기 상태에서 불투명도 1로 설정
+  transform: translateY(0); // 초기 상태에서 Y축으로 이동하지 않도록 설정
+}
+
+// 애니메이션이 시작될 때 불투명도를 0으로 설정하고 Y축으로 아래로 이동
+// 이 스타일은 Swup가 페이지 전환을 시작할 때 적용됩니다.
+html.is-animating .transition-fade {
+  opacity: 0; // 불투명도를 0으로 설정하여 화면에서 사라지는 효과
+  transform: translateY(20px); // Y축으로 20px 아래로 이동
+}

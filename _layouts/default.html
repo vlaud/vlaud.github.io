@@ -22,14 +22,39 @@
         {%- include sidebar-left.html -%}
       </div>
 
-      <div class="content pure-u-1 pure-u-md-1-2">
+      <!-- 
+      메인 콘텐츠 영역과 오른쪽 사이드바를 정의
+      pure-u-*는 Pure.css의 그리드 시스템을 사용하여 레이아웃을 구성합니다.
+
+      <main>은 웹 표준에서 페이지의 주요 콘텐츠를 담는 태그
+      Swup이 작동하려면, 페이지 전환 시 애니메이션으로 바뀔 컨테이너가 필요합니다.
+      그 컨테이너가 바로 id="swup"입니다.
+      
+      class 속성
+      content: 의미적 클래스 (컨텐츠 영역)
+
+      pure-u-1: 모바일에서는 너비 100%
+
+      pure-u-md-1-2: 중간 화면 이상에서는 너비 50%
+
+      transition-fade: 페이지 전환 애니메이션 적용 클래스
+
+      Swup은 **id="swup"**가 붙은 영역의 콘텐츠만 AJAX로 불러와서 교체하기 때문에,
+      주요 콘텐츠 영역(main)에 붙여야 페이지 이동이 자연스럽게 보입니다.
+      -->
+      <main id="swup" class="content pure-u-1 pure-u-md-1-2 transition-fade">
         {%- include content.html -%}
-      </div>
+      </main>
       <div class="sidebar-right pure-u-1 pure-u-md-1-4">
         {%- include sidebar-right.html -%}
       </div>
     </div>
 
+    <!-- Swup은 페이지 전환을 위한 JavaScript 라이브러리 -->
+    <script src="https://unpkg.com/swup@4"></script>
+    <script>
+      const swup = new Swup(); // Swup 인스턴스를 생성하여 페이지 전환을 관리합니다.
+    </script>
     <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
 
     {%- include scroll.html -%}
