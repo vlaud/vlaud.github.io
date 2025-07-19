@@ -3,7 +3,7 @@ layout: post
 title: "Unity 3D 공포 게임 프로젝트 - choswork"
 date: 2025-05-23
 categories: [Unity, GameDev, Portfolio]
-tags: [Unity, C#, FSM, GameDev, AI, 3D]
+tags: [Unity, csharp, FSM, GameDev, AI, 3D]
 ---
 
 # choswork: 투약 시간(가제)

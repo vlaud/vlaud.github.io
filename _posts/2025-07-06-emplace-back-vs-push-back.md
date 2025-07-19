@@ -2,8 +2,8 @@
 layout: post
 title: "emplace_back vs push_back - 개념과 예시"
 date: 2025-07-06
-categories: [C++, Modern C++]
-tags: [C++, C++11, emplace_back, push_back, vector, performance]
+categories: [cplusplus, modern-cplusplus]
+tags: [cplusplus, cplusplus11, emplace_back, push_back, vector, performance]
 ---
 
 ## 개념

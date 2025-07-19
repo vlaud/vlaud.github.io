@@ -15,13 +15,13 @@
     {%- for tag in page.tags -%}
       <li>
         {%- assign tag_slug = tag -%}
-        {%- assign tag_name = site.data.taxonomy_labels[tag_slug] | default: tag_slug -%}
+        {%- assign tag_name = site.data.taxonomy_names[tag_slug] | default: tag_slug -%}
         <!-- tags_archive_page가 존재하면 -->
         {%- if tags_archive_page -%}
         <!-- 태그 이름이 링크로 출력 -->
           <a class="post-tag" href="{{ tags_archive_page | relative_url }}#{{ tag_slug }}">{{ tag_name }}</a>
         {%- else -%}
-          <span class="post-tag">{{ tag }}</span>
+          <span class="post-tag">{{ tag_name }}</span>
         {%- endif -%}
       </li>
     {%- endfor -%}
