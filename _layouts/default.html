@@ -66,6 +66,7 @@
       });
 
       // 페이지가 교체되기 직전에 이전 페이지 스크립트 정리
+      // will-replace는 더 이상 사용되지 않음 -> content:replace
       swup.hooks.before('content:replace', (visit) => {
         if (typeof window.cleanupPageScripts === 'function') {
           console.log('이전 페이지의 스크립트를 정리합니다.');
