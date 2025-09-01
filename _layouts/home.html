@@ -9,7 +9,7 @@ layout: default
   <section class="post-entry">
     <h2 class="post-title">
       <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
+        {{ post.title | escape }}
       </a>
     </h2>
 
