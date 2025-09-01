@@ -3,6 +3,9 @@ layout: default
 ---
 
 <article class="page">
-  <h1 class="page-title">{{ page.title }}</h1>
+  <!-- page-title은 페이지의 제목을 나타냄 -->
+  <!-- escape 필터는 제목에 포함된 특수문자들을 HTML 엔티티로 변환함 -->
+  <!-- HTML 엔티티:  & = &amp; < = &lt; 등등 -->
+  <h1 class="page-title">{{ page.title | escape }}</h1> 
   {{ content }}
 </article>
