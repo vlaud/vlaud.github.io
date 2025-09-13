@@ -2,7 +2,7 @@
 layout: post
 title: "[Unity] 래그돌 슬로우 모션 물리 버그 해결기"
 date: 2025-08-20
-categories: [Unity, Game Development]
+categories: [Unity, GameDev]
 tags: [Unity, Ragdoll, Physics, Bug, Slow Motion]
 ---
 

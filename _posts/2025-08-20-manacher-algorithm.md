@@ -2,7 +2,7 @@
 layout: post
 title: "마나커 알고리즘 (Manacher's Algorithm) - 개념과 예시"
 date: 2025-08-20
-categories: [Algorithm, String]
+categories: [Algorithm, Data Structure]
 tags: [Manacher, Palindrome, String, Algorithm]
 ---
 
