@@ -3,7 +3,7 @@ layout: post
 title: "[LeetCode 721] Accounts Merge"
 date: 2025-09-15
 categories: [Algorithm, LeetCode]
-tags: [Algorithm, LeetCode, Graph, DFS, Union-Find, C++]
+tags: [Algorithm, LeetCode, Graph, DFS, Union-Find, cplusplus]
 ---
 
 <a href="https://leetcode.com/problems/accounts-merge/" style="font-size:1.5em;"><b>문제 링크</b></a>
