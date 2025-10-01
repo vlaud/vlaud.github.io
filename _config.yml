@@ -59,3 +59,6 @@ author:
   location: South Korea
   url: https://github.com/vlaud
   email: antennawell@gmail.com
+
+sitemap_exclude:
+  - "sitemap.xml"
