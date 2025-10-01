@@ -60,5 +60,10 @@ author:
   url: https://github.com/vlaud
   email: antennawell@gmail.com
 
-sitemap_exclude:
-  - "sitemap.xml"
+# Defaults
+defaults:
+  -
+    scope:
+      path: "sitemap.xml"
+    values:
+      layout: none
