@@ -50,7 +50,6 @@
       </div>
     </div>
 
-    {%- if page.url != '/sitemap.xml' -%}
     <!-- Swup 페이지 전환 라이브러리 -->
     <script src="https://unpkg.com/swup@4" defer></script>
     <!-- Swup 스크립트 플러그인: 페이지 전환 시 스크립트를 다시 실행 -->
@@ -96,7 +95,6 @@
 
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
       {%- include google-analytics.html -%}
-    {%- endif -%}
     {%- endif -%}
   </body>
 </html>
