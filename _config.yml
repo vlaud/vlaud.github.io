@@ -56,3 +56,13 @@ author:
   location: South Korea
   url: https://github.com/vlaud
   email: antennawell@gmail.com
+
+# 블로그 내 검색을 위한 스크립트
+tipue_search:
+     include:
+         pages: false # pages 레이아웃에 해당하는 일반 html 페이지는 검색에서 제외
+         collections: []
+     exclude:
+         files: [search.html, index.html, tags.html] # search, index, tags 페이지 또한 검색에서 제외
+         categories: []
+         tags: []

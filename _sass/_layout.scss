@@ -16,7 +16,7 @@
   padding-top: var(--spacer-2);
   padding-left: var(--spacer-2);
   padding-right: var(--spacer-2);
-  margin-left:  auto;
+  margin-left: auto;
   margin-right: auto;
   min-height: 100vh;
 }
@@ -98,4 +98,29 @@ footer {
 html.is-animating .transition-fade {
   opacity: 0; // 불투명도를 0으로 설정하여 화면에서 사라지는 효과
   transform: translateY(20px); // Y축으로 20px 아래로 이동
+}
+
+// 검색창의 모양 설정
+.floating-search-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; // Ensure it's on top of other elements
+  background-color: var(--sidebar-bg-color, #202020); // Use theme variable or a default
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+
+
+}
+
+// 검색창 바탕 모양, 위치 설정
+.floating-search-wrapper form {
+  // 1. 바탕의 너비와 높이 설정
+  width: 250px;
+  height: 40px;
+  // 2. 검색창 가로 세로 중앙 정렬
+  display: flex; // 
+  align-items: center; // 세로 중앙 정렬
+  // justify-content: center; // 가로 중앙 정렬
 }
