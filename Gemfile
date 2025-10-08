@@ -13,7 +13,6 @@ gem 'faraday-retry'
 group :jekyll_plugins do
   gem 'jekyll-gist'
   gem 'jekyll-paginate'
-  gem 'jekyll-sitemap'
 end
 
 

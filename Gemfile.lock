@@ -118,7 +118,6 @@ DEPENDENCIES
   jekyll-compose
   jekyll-gist
   jekyll-paginate
-  jekyll-sitemap
   logger
   not-pure-poole!
   rake (~> 12.0)
