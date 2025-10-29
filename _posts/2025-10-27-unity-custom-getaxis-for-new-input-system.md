@@ -39,18 +39,6 @@ namespace WindowsInput
     /// </summary>
     public class Axis
     {
-        // 기존 Input Manager를 커스터마이징하기 위한 변수들
-        [Header("Old Input System (Optional)")]
-        /// <summary>
-        /// 음수의 값을 출력하는 방향키
-        /// </summary>
-        public KeyCode negative;
-
-        /// <summary>
-        /// 양수의 값을 출력하는 방향키
-        /// </summary>
-        public KeyCode positive;
-
         [Header("Axis Settings")]
         /// <summary>
         /// 키를 누르지 않을 때 0으로 돌아가는 속도
@@ -65,24 +53,15 @@ namespace WindowsInput
         /// <summary>
         /// 키를 누르지 않을 때 val이 이 값 이하면 0f로 초기화
         /// </summary>
-        public float Dead = 0.001f;
-
-        [SerializeField]
-        /// <summary>
-        /// Input Manager에서 커스텀 Axis의 움직임 값
-        /// </summary>
-        private float value;
+        public float dead = 0.001f;
 
         public Axis() { }
 
-        public Axis(KeyCode negative, KeyCode positive, float dead, float autoReturnSpeed, float digitalReturnSpeed)
+        public Axis(float dead, float autoReturnSpeed, float digitalReturnSpeed)
         {
-            this.negative = negative;
-            this.positive = positive;
-            this.Dead = dead;
+            this.dead = dead;
             this.autoReturnSpeed = autoReturnSpeed;
             this.digitalReturnSpeed = digitalReturnSpeed;
-            this.value = 0f;
         }
 
         /// <summary>
@@ -128,7 +107,7 @@ namespace WindowsInput
             }
 
             // 입력이 없으면서 움직임 절대값이 Dead보다 작으면 0으로 초기화
-            if (input == 0 && Mathf.Abs(val) < Dead)
+            if (input == 0 && Mathf.Abs(val) < dead)
             {
                 val = 0f;
             }
@@ -141,27 +120,10 @@ namespace WindowsInput
         /// Input Manager에서 Axis를 커스텀할 때 사용하는 함수
         /// </summary>
         /// <returns></returns>
-        public float UpdateAxisFromLegacyInput()
+        public float UpdateAxisFromLegacyInput(KeyCode positive, KeyCode negative, ref float value)
         {
-            float input = 0;
-            if (Input.GetKey(positive))
-            {
-                input = 1;
-            }
-            else if (Input.GetKey(negative))
-            {
-                input = -1;
-            }
+            float input = GetValueRaw(positive, negative);
             UpdateAxis(input, ref value);
-            return value;
-        }
-
-        /// <summary>
-        /// Input Manager에서 커스텀 Axis의 움직임 값 반환 함수
-        /// </summary>
-        /// <returns></returns>
-        public float GetValue()
-        {
             return value;
         }
 
@@ -169,24 +131,12 @@ namespace WindowsInput
         /// GetAxisRaw 커스텀 함수
         /// </summary>
         /// <returns></returns>
-        public float GetValueRaw()
+        private float GetValueRaw(KeyCode positive, KeyCode negative)
         {
             bool negativeHeld = Input.GetKey(negative);
             bool positiveHeld = Input.GetKey(positive);
 
-            if (negativeHeld && positiveHeld)
-            {
-                return 0f;
-            }
-            if (negativeHeld)
-            {
-                return -1f;
-            }
-            if (positiveHeld)
-            {
-                return 1f;
-            }
-            return 0f;
+            return (negativeHeld ? -1f : 0f) + (positiveHeld ? 1f : 0f);
         }
     }
 }
@@ -201,9 +151,16 @@ using WindowsInput; // Axis 클래스의 네임스페이스
 
 public class PlayerController : MonoBehaviour
 {
-    public Axis horizontalAxis = new Axis(); // 새 Axis 클래스 추가
+    public Axis moveAxis = new Axis(); // 새 Axis 클래스 추가
     public Vector2 moveVec; // 입력키 입력 여부 확인 변수
     public Vector2 curVec; // 실제 움직임에 사용될 값
+    public Vector2 legacyInput; // 레거시 인풋 키의 움직임 값
+
+    // 방향키
+    public KeyCode left;
+    public KeyCode right;
+    public KeyCode up;
+    public KeyCode down;
 
     // Input System의 함수를 통해 방향키 입력 값 받아옴
     void OnMove(InputValue value)
@@ -211,11 +168,19 @@ public class PlayerController : MonoBehaviour
         moveVec = value.Get<Vector2>();
     }
 
+    // InputAction.CallbackContext도 가능
+    // public void OnMove(InputAction.CallbackContext context)
+    // {
+    //     moveVec = context.ReadValue<Vector2>();
+    // }
+
     void Update()
     {
         // 매 프레임마다 움직임 값을 업데이트
         move.UpdateAxis(moveVec.x, ref curVec.x);
         move.UpdateAxis(moveVec.y, ref curVec.y);
+        move.UpdateAxisFromLegacyInput(right, left, ref legacyInput.x);
+        move.UpdateAxisFromLegacyInput(up, down, ref legacyInput.y);
     }
 }
 ```
