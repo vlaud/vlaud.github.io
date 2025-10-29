@@ -1,4 +1,3 @@
-Sitemap: https://vlaud.github.io/sitemap.xml
-
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: https://vlaud.github.io/sitemap.xml
