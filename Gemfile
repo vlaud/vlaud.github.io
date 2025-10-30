@@ -2,6 +2,7 @@ source "https://rubygems.org"
 gemspec
 
 # gem 'not-pure-poole'
+gem 'jekyll-sitemap'
 gem 'jekyll-compose', group: [:jekyll_plugins]
 gem 'base64' # ← 명시적으로 추가
 gem 'fiddle'
