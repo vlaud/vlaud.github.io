@@ -2,7 +2,7 @@
 layout: post
 title: "[LeetCode 721] Accounts Merge"
 date: 2025-09-15
-categories: [Algorithm, LeetCode]
+categories: [Algorithm, Problem Solving]
 tags: [Algorithm, LeetCode, Graph, DFS, Union-Find, cplusplus]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "[LeetCode 973] K Closest Points to Origin"
 date: 2025-06-28
-categories: [Algorithm, LeetCode]
+categories: [Algorithm, Problem Solving]
 tags: [Algorithm, LeetCode, QuickSelect, 3-way-partitioning, Sorting]
 ---
 

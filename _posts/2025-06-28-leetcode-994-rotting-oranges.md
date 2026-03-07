@@ -2,7 +2,7 @@
 layout: post
 title: "[LeetCode 994] Rotting Oranges"
 date: 2025-06-28
-categories: [Algorithm, LeetCode]
+categories: [Algorithm, Problem Solving]
 tags: [Algorithm, LeetCode, BFS, Queue, 자료구조]
 ---
 

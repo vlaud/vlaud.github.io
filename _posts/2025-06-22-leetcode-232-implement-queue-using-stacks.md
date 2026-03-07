@@ -2,7 +2,7 @@
 layout: post
 title: "[LeetCode 232]  Implement Queue using Stacks"
 date: 2025-06-22
-categories: [Algorithm, LeetCode]
+categories: [Algorithm, Problem Solving]
 tags: [Algorithm, LeetCode, Stack, Queue, 자료구조]
 ---
 
