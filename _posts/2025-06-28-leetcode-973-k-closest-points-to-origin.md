@@ -6,7 +6,7 @@ categories: [Algorithm, Problem Solving]
 tags: [Algorithm, LeetCode, QuickSelect, 3-way-partitioning, Sorting]
 ---
 
-<a href="https://leetcode.com/problems/k-closest-points-to-origin/" style="font-size:1.5em;"><b>문제 링크</b></a>
+<a href="https://leetcode.com/problems/k-closest-points-to-origin/" style="font-size:1.5em;"><strong>문제 링크</strong></a>
 
 ## 문제 설명<br/><br/>
 `points` 배열이 주어지는데, 각 `points[i] = [xi, yi]`는 2D 평면의 한 점을 나타낸다. 정수 `k`가 함께 주어질 때, 원점 `(0, 0)`에서 가장 가까운 `k`개의 점들을 반환해야 한다. 두 점 사이의 거리는 유클리드 거리를 사용한다. 반환되는 점들의 순서는 상관없다.<br/><br/>

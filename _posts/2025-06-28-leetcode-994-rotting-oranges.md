@@ -6,7 +6,7 @@ categories: [Algorithm, Problem Solving]
 tags: [Algorithm, LeetCode, BFS, Queue, 자료구조]
 ---
 
-<a href="https://leetcode.com/problems/rotting-oranges/" style="font-size:1.5em;"><b>문제 링크</b></a>
+<a href="https://leetcode.com/problems/rotting-oranges/" style="font-size:1.5em;"><strong>문제 링크</strong></a>
 
 ## 문제 설명<br/><br/>
 신선한 오렌지가 썩은 오렌지에 의해 썩어가는 최소 시간 구하기 <br/><br/>

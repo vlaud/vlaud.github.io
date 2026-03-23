@@ -15,7 +15,7 @@ categories: [Algorithm, LeetCode]
 tags: [Algorithm, LeetCode, 태그1, 태그2, 태그3, 등등]
 ---
 
-<a href="문제 링크" style="font-size:1.5em;"><b>문제 링크</b></a>
+<a href="문제 링크" style="font-size:1.5em;"><strong>문제 링크</strong></a>
 
 ## 문제 설명<br/><br/>
 문제 설명 <br/><br/>

@@ -6,7 +6,7 @@ categories: [Algorithm, Problem Solving]
 tags: [Algorithm, LeetCode, Graph, DFS, Union-Find, cplusplus]
 ---
 
-<a href="https://leetcode.com/problems/accounts-merge/" style="font-size:1.5em;"><b>문제 링크</b></a>
+<a href="https://leetcode.com/problems/accounts-merge/" style="font-size:1.5em;"><strong>문제 링크</strong></a>
 
 ## 문제 설명
 
