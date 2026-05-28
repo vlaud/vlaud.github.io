@@ -115,8 +115,7 @@ html.is-animating .transition-fade {
 // 검색창 바탕 모양, 위치 설정
 .floating-search-wrapper form {
   // 1. 바탕의 너비와 높이 설정
-  width: 100%;
-  max-width: 250px;
+  max-width: 100%;
   max-height: 40px;
   // 2. 검색창 가로 세로 중앙 정렬
   display: flex; // 
