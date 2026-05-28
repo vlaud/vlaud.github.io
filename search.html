@@ -13,6 +13,27 @@ permalink: /search/
       $('#search-input').val(query);
     }
   });
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ "/search.json" | relative_url }}',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}" target="_blank">{title}</a></li>',
+    noResultsText: '검색결과가 존재하지 않습니다.',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome'],
+    success: function() {
+      // 데이터 로드가 비동기이므로, 약간의 지연 후에 검색을 실행하여 데이터가 준비되도록 함
+      var self = this;
+      var urlParams = new URLSearchParams(window.location.search);
+      var query = urlParams.get('q');
+      if (query) {
+        setTimeout(function() {
+          self.search(query);
+        }, 100); // 0.1초 지연
+      }
+    }
+  });
 </script>
 
 <div class="container">
@@ -34,10 +55,10 @@ permalink: /search/
   SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
-    json: '/search.json',
+    json: '{{ "/search.json" | relative_url }}',
     searchResultTemplate: '<li><a href="{url}" title="{desc}" target="_blank">{title}</a></li>',
     noResultsText: '검색결과가 존재하지 않습니다.',
-    limit: 10000,
+    limit: 10,
     fuzzy: false,
     exclude: ['Welcome'],
     success: function() {
