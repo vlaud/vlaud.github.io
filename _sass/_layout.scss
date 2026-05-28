@@ -103,24 +103,27 @@ html.is-animating .transition-fade {
 // 검색창의 모양 설정
 .floating-search-wrapper {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000; // Ensure it's on top of other elements
-  background-color: var(--sidebar-bg-color, #202020); // Use theme variable or a default
-  padding: 5px;
-  border-radius: 5px;
+  top: 20px; // 세로 위치
+  right: 20px; // 가로 위치
+  z-index: 1000; // 다른 요소들보다 위에 있도록 설정
+  background-color: var(--sidebar-bg-color, #202020); // 테마 변수 또는 기본 검은색 사용
+  padding: 5px; // 테두리 크기
+  border-radius: 5px; // 모서리 둥근 정도
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-
-
 }
 
 // 검색창 바탕 모양, 위치 설정
 .floating-search-wrapper form {
   // 1. 바탕의 너비와 높이 설정
-  width: 250px;
-  height: 40px;
+  width: 100%;
+  max-width: 250px;
+  max-height: 40px;
   // 2. 검색창 가로 세로 중앙 정렬
   display: flex; // 
   align-items: center; // 세로 중앙 정렬
-  // justify-content: center; // 가로 중앙 정렬
+  justify-content: center; // 가로 중앙 정렬
+}
+
+.tipue_search_right {
+  width: 100%;
 }

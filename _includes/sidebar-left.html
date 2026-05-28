@@ -6,7 +6,7 @@
     {%- else -%}
     {%- assign avatar = site.avatar | relative_url -%}
     {%- endif -%}
-    <img src="{{ avatar }}" class="avatar-image" alt="{{ site.author.name }}">
+    <img src="{{ avatar }}" class="avatar-image" alt="{{ site.author.name }}" loading="lazy">
   </div>
   {%- endif %}
   <div class="masthead-title">
@@ -34,7 +34,7 @@
       {% for social in site.data.social -%}
       <li class="pure-menu-item">
         <a class="social-icon pure-menu-link" href="{{ social.url }}">
-          <i class="{{ social.icon | default: 'fas fa-link' }}" title="{{ social.title }}"></i>
+          <em class="{{ social.icon | default: 'fas fa-link' }}" title="{{ social.title }}"></em>
         </a>
       </li>
       {%- endfor %}
